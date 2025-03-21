@@ -1,0 +1,151 @@
+# Window Settings
+[window]
+decorations = "Full"
+dynamic_padding = true
+padding = { x = 10, y = 10 }
+opacity = 0.85
+startup_mode = "Maximized"
+
+# Font Settings
+[font]
+size = 14.0
+normal = { family = "Fira Code", style = "Regular" }
+bold = { family = "Fira Code", style = "Bold" }
+italic = { family = "Fira Code", style = "Italic" }
+bold_italic = { family = "Fira Code", style = "Bold Italic" }
+
+# Colors (Matrix Style)
+[colors.primary]
+background = "#0D0208"
+foreground = "#00FF41"
+[colors.cursor]
+text = "#0D0208"
+cursor = "#00FF41"
+[colors.normal]
+black = "#0D0208"
+red = "#FF5733"
+green = "#00FF41"
+yellow = "#FFC107"
+blue = "#0088FF"
+magenta = "#FF00FF"
+cyan = "#00FFFF"
+white = "#FFFFFF"
+[colors.bright]
+black = "#555555"
+red = "#FF9999"
+green = "#66FF66"
+yellow = "#FFFF66"
+blue = "#66B3FF"
+magenta = "#FF66FF"
+cyan = "#66FFFF"
+white = "#FFFFFF"
+
+# Cursor
+[cursor]
+style = "Beam"
+thickness = 0.15
+#blinking = "On"
+
+# Scrolling
+[scrolling]
+history = 50000
+multiplier = 5
+
+# Selection
+[selection]
+save_to_clipboard = true
+
+# Mouse
+[mouse]
+hide_when_typing = true
+
+# Key Bindings (tmux + Vim + Kubernetes shortcuts)
+#[keyboard.bindings]
+# tmux Basics
+#- { key = "T", mods = "Command", chars = "\u0002c" }
+#- { key = "D", mods = "Command", chars = "\u0002%" }
+#- { key = "D", mods = "Command|Shift", chars = "\u0002\"" }
+#- { key = "W", mods = "Command", chars = "\u0002x" }
+#- { key = "Left", mods = "Command", chars = "\u0002\u001b[D" }
+#- { key = "Right", mods = "Command", chars = "\u0002\u001b[C" }
+#- { key = "Up", mods = "Command", chars = "\u0002\u001b[A" }
+#- { key = "Down", mods = "Command", chars = "\u0002\u001b[B" }
+#- { key = "Enter", mods = "Command|Shift", chars = "\u0002z" }
+# Vim-like Word Jumping
+#- { key = "Left", mods = "Alt", chars = "\u001Bb" }
+#- { key = "Right", mods = "Alt", chars = "\u001Bf" }
+# Kubernetes Quickies
+#- { key = "K", mods = "Command", chars = "\u0002kctx" }
+#- { key = "L", mods = "Command", chars = "\u0002kl" }
+
+[[keyboard.bindings]]
+key = "T"
+mods = "Command"
+chars = "\u0002c"
+
+[[keyboard.bindings]]
+key = "D"
+mods = "Command"
+chars = "\u0002%"
+
+[[keyboard.bindings]]
+key = "D"
+mods = "Command|Shift"
+chars = "\u0002\""
+
+[[keyboard.bindings]]
+key = "W"
+mods = "Command"
+chars = "\u0002x"
+
+[[keyboard.bindings]]
+key = "Left"
+mods = "Command"
+chars = "\u0002\u001b[D"
+
+[[keyboard.bindings]]
+key = "Right"
+mods = "Command"
+chars = "\u0002\u001b[C"
+
+[[keyboard.bindings]]
+key = "Up"
+mods = "Command"
+chars = "\u0002\u001b[A"
+
+[[keyboard.bindings]]
+key = "Down"
+mods = "Command"
+chars = "\u0002\u001b[B"
+
+[[keyboard.bindings]]
+key = "Enter"
+mods = "Command|Shift"
+chars = "\u0002z"
+
+[[keyboard.bindings]]
+key = "Left"
+mods = "Alt"
+chars = "\u001Bb"
+
+[[keyboard.bindings]]
+key = "Right"
+mods = "Alt"
+chars = "\u001Bf"
+
+[[keyboard.bindings]]
+key = "K"
+mods = "Command"
+chars = "\u0002kctx"
+
+[[keyboard.bindings]]
+key = "L"
+mods = "Command"
+chars = "\u0002kl"
+
+[general]
+# General Settings
+live_config_reload = true
+
+[terminal]
+shell = { program = "/bin/zsh", args = ["--login", "-c", "tmux new-session -A -s k8s"] }
